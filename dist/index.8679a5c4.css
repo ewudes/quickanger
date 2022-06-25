@@ -1,0 +1,390 @@
+.search {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.search__input {
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  height: 32px;
+  background-color: #efefef;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin: 14px 10px;
+  padding-left: 30px;
+}
+
+.search:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("search.1d1c6633.png");
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: -2px;
+  left: 16px;
+}
+
+.chatList {
+  height: calc(100vh - 105px);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.chatList::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.chatList__item {
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding: 12px 10px;
+  display: flex;
+  position: relative;
+}
+
+.chatList__item:hover {
+  background-color: #e4edfd;
+}
+
+.chatList__avatar {
+  width: 47px;
+  height: 47px;
+  background-image: url("default-pic.67237860.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.chatList__description {
+  display: inline-block;
+}
+
+.chatList__title {
+  height: 15px;
+  max-width: 165px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 900;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.chatList__lastMessage {
+  color: #999;
+  max-width: 180px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 4px 0 0;
+  font-size: 12px;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.chatList__common {
+  flex-direction: column;
+  margin-left: auto;
+  display: flex;
+  position: relative;
+}
+
+.chatList__date {
+  color: #999;
+  padding-top: 3px;
+  font-size: 9px;
+}
+
+.chatList__badge {
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 10;
+  background-color: #3369f3;
+  border-radius: 50%;
+  padding-top: 4px;
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.dialog {
+  color: #999;
+  margin: 0 auto;
+}
+
+.home {
+  background-color: #fff;
+  display: flex;
+}
+
+.home__sidebar {
+  width: 310px;
+  box-sizing: border-box;
+  border-right: 1px solid #eaeaea;
+}
+
+.home__toProfile {
+  width: 75px;
+  text-align: right;
+  color: #999;
+  cursor: pointer;
+  margin: 19px 10px 9px auto;
+  display: block;
+}
+
+.home__toProfile:hover {
+  color: #3d3d3d;
+}
+
+.home__toProfile:after {
+  content: ">";
+  margin-left: 5px;
+}
+
+.home__chats {
+  width: calc(100% - 310px);
+  align-items: center;
+  display: flex;
+}
+
+.profile {
+  display: flex;
+  position: relative;
+}
+
+.profile__form {
+  width: 510px;
+  margin: 60px auto;
+}
+
+.profile__header, .profile__body, .profile__footer {
+  flex-direction: column;
+  display: flex;
+}
+
+.profile__footer {
+  margin-top: 60px;
+}
+
+.profile__pic {
+  width: 130px;
+  height: 130px;
+  background-image: url("default-pic.67237860.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.profile__title {
+  margin: 21px auto;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.profile__label {
+  padding: 10px 0;
+  display: flex;
+}
+
+.profile__label:not(:last-child) {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.profile__field {
+  text-align: right;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.profile__btnChangePass {
+  position: relative;
+}
+
+.profile__btnChangePass:after, .profile__btnChangePass:before {
+  content: "";
+  width: 510px;
+  height: 1px;
+  background-color: #eaeaea;
+  position: absolute;
+  left: 0;
+}
+
+.profile__btnChangePass:after {
+  top: -10px;
+}
+
+.profile__btnChangePass:before {
+  bottom: -10px;
+}
+
+.backTo {
+  width: 64px;
+  box-sizing: border-box;
+  height: 100%;
+  border: 1px solid #eaeaea;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.backTo__btn {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background-color: #3369f3;
+  background-image: url("backTo.7ba2b16d.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  border-radius: 50%;
+  margin: auto;
+  font-size: 0;
+  position: relative;
+}
+
+.backTo__btn:hover {
+  width: 30px;
+  height: 30px;
+}
+
+.btn {
+  width: 116px;
+  cursor: pointer;
+  text-align: left;
+  background-color: #0000;
+  border: 0;
+  margin: 10px 0;
+  padding: 0 1px;
+  font-size: 13px;
+}
+
+.btn:hover {
+  opacity: .8;
+}
+
+.danger {
+  color: red;
+}
+
+.primary {
+  color: #3369f3;
+}
+
+.authForm {
+  width: 340px;
+  border-radius: 12px;
+  flex-direction: column;
+  margin: 0 auto;
+  display: flex;
+  box-shadow: 0 0 6px #00000024;
+}
+
+.authForm__title {
+  margin: 50px auto 40px;
+  font-size: 20px;
+}
+
+.authForm__label {
+  flex-direction: column;
+  margin: 0 30px 16px;
+  font-size: 9px;
+  display: flex;
+}
+
+.authForm__field {
+  border: none;
+  border-bottom: 1px solid #3369f3;
+  outline: none;
+  padding: 8px 0 7px;
+}
+
+.authForm__submit {
+  color: #fff;
+  width: 280px;
+  text-align: center;
+  background-color: #3369f3;
+  border-radius: 8px;
+  margin: 47px 30px 0;
+  padding: 10px 0;
+}
+
+.authForm__signIn {
+  text-align: center;
+  margin: 5px auto 20px;
+  padding: 10px 0;
+}
+
+.auth {
+  align-items: center;
+  display: flex;
+}
+
+body {
+  color: #3d3d3d;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
+body, #app {
+  height: 100vh;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.error {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.error__title {
+  margin: 20px 0;
+  font-size: 40px;
+}
+
+.error__description {
+  margin-bottom: 69px;
+  font-size: 20px;
+}
+
+.error__btn {
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.8679a5c4.css.map */
