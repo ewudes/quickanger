@@ -1,7 +1,7 @@
 import home from './pages/home/home';
 import profile from './pages/profile/profile';
 import auth from './pages/auth/auth';
-import notFound from './pages/notFound/notFound';
+import error from './pages/error/error';
 import './index.scss';
 
 const currentPath = window.location.pathname;
@@ -19,5 +19,5 @@ switch(currentPath) {
     rootElement.innerHTML = home();
     break;
   default:
-    rootElement.innerHTML = notFound();
+    rootElement.innerHTML = error();
 }

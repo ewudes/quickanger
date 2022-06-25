@@ -1,5 +1,6 @@
 import signUp from './signUp.hbs';
 import input from '../../input/input';
+import button from '../../button/button';
 import '../authForm.scss'
 
 export default () => signUp({
