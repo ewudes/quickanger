@@ -1,0 +1,7 @@
+.vscode
+.DS_Store
+Thumb.db
+
+node_modules/
+dist/
+.parcel-cache/
