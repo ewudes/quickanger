@@ -1,4 +1,23 @@
-import home from './pages/home/home.js';
+import home from './pages/home/home';
+import profile from './pages/profile/profile';
+import auth from './pages/auth/auth';
+import notFound from './pages/notFound/notFound';
 import './index.scss';
 
-document.getElementById('app').innerHTML = home();
+const currentPath = window.location.pathname;
+const rootElement = document.getElementById('app');
+
+switch(currentPath) {
+  case '/auth/login':
+  case '/auth/registration':
+    rootElement.innerHTML = auth();
+    break;
+  case '/profile':
+    rootElement.innerHTML = profile();
+    break;
+  case '/':
+    rootElement.innerHTML = home();
+    break;
+  default:
+    rootElement.innerHTML = notFound();
+}
