@@ -1,21 +1,24 @@
 .search {
   position: relative;
+  box-sizing: border-box;
 
   &__input {
-    margin: 14px 0;
-    width: 100%;
+    margin: 14px 10px;
+    width: calc(100% - 20px);
     box-sizing: border-box;
     height: 32px;
     border: none;
     background-color: #efefef;
     border-radius: 5px;
     padding-left: 30px;
+    outline: none;
+
   }
 
   &::before {
     position: absolute;
     top: -2px;
-    left: 6px;
+    left: 16px;
     content: "";
     width: 20px;
     height: 20px;

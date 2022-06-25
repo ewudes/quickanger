@@ -1,13 +1,17 @@
 <ul class="chatList">
+  {{#each chats}}
   <li class="chatList__item">
     <a class="chatList__avatar" href="#"></a>
     <div class="chatList__description">
-      <a class="chatList__title" href="#">Константин Константинович Константинов</a>
-      <p class="chatList__lastMessage">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона</p>
+      <a class="chatList__title" href="#">{{this.title}}</a>
+      <p class="chatList__lastMessage">{{this.lastMessage}}</p>
     </div>
     <div class="chatList__common">
-      <span class="chatList__date">12 Апр 2020</span>
-      <span class="chatList__badge">32</span>
+      <span class="chatList__date">{{this.date}}</span>
+      {{#if this.badge}}
+      <span class="chatList__badge">{{this.badge}}</span>
+      {{/if}}
     </div>
   </li>
+  {{/each}}
 </ul>

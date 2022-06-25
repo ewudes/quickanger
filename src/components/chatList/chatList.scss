@@ -1,35 +1,23 @@
 .chatList {
+  overflow-y: scroll;
+  height: calc(100vh - 105px);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 
   &__item {
     position: relative;
     display: flex;
-    padding: 12px 0;
+    padding: 12px 10px;
     border-top: 1px solid #eaeaea;
     border-bottom: 1px solid #eaeaea;
 
     &:hover {
       background-color: #e4edfd;
-
-      &::before,
-      &::after {
-        position: absolute;
-        top: -1px;
-        content: "";
-        display: block;
-        width: 12px;
-        height: 100%;
-        border-top: 1px solid #eaeaea;
-        border-bottom: 1px solid #eaeaea;
-        background-color: #e4edfd;
-      }
-
-      &::before {
-        left: -11px;
-      }
-
-      &::after {
-        right: -11px;
-      }
     }
   }
 
