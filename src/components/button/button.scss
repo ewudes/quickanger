@@ -1,0 +1,22 @@
+.btn {
+  width: 116px;
+  border: 0;
+  padding: 0 1px;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+  margin: 10px 0;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.danger {
+  color: #ff0000;
+}
+
+.primary {
+  color: #3369f3
+}

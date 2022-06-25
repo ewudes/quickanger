@@ -10,4 +10,6 @@ export default () => signUp({
   phone: input('phone', 'Телефон', 'phone', '+7 (909) 967 30 30', 'required', 'authForm__label', 'authForm__field'),
   password: input('password', 'Пароль', 'password', '*********', 'required', 'authForm__label', 'authForm__field'),
   repeatPassword: input('password', 'Пароль (ещё раз)', 'password', '*********', 'required', 'authForm__label', 'authForm__field'),
+  submitBtn: button('Зарегистрироваться', 'primary', 'submit', 'authForm__submit'),
+  signInBtn: button('Войти', 'primary', 'button', 'authForm__signIn')
 });
