@@ -1,0 +1,129 @@
+.btn {
+  width: 116px;
+  border: 0;
+  padding: 0 1px;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  color: #3369f3;
+  font-size: 13px;
+  margin: 10px 0;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.profile {
+  position: relative;
+  display: flex;
+
+  &__form {
+    width: 510px;
+    margin: 60px auto;
+  }
+
+  &__header,
+  &__body,
+  &__footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__footer {
+    margin-top: 60px;
+  }
+
+  &__pic {
+    display: block;
+    width: 130px;
+    height: 130px;
+    background-image: url("../../../static/img/default-pic.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  &__title {
+      margin: 21px auto;
+      font-size: 16px;
+      font-weight: 900;
+  }
+
+  &__label {
+    display: flex;
+    padding: 10px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #eaeaea;
+    }
+  }
+
+  &__field {
+    border: none;
+    flex: 1;
+    text-align: right;
+    outline: none;
+  }
+
+  &__btnChangePass {
+    position: relative;
+
+    &::after,
+    &::before {
+      position: absolute;
+      left: 0;
+      content: "";
+      width: 510px;
+      height: 1px;
+      background-color: #eaeaea;
+    }
+
+    &::after {
+      top: -10px;
+    }
+
+    &::before {
+      bottom: -10px;
+    }
+  }
+
+  &__btnClose {
+    color: #ff0000;
+  }
+}
+
+.backTo {
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 0;
+  border: 1px solid #eaeaea;
+  width: 64px;
+  box-sizing: border-box;
+  height: 100%;
+  align-items: center;
+
+  &__btn {
+    position: relative;
+    border: none;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    border-radius: 50%;
+    margin: auto;
+    background-color: #3369f3;
+    background-image: url("../../../static/img/backTo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &:hover {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
