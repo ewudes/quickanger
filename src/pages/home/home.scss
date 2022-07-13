@@ -1,0 +1,37 @@
+.home {
+  display: flex;
+  background-color: #ffffff;
+
+  &__sidebar {
+    width: 310px;
+    border-right: 1px solid #eaeaea;
+    box-sizing: border-box;
+  }
+
+  &__toProfile {
+    display: block;
+    width: 75px;
+    margin-top: 19px;
+    margin-left: auto;
+    text-align: right;
+    color: #999999;
+    margin-bottom: 9px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: #3d3d3d;
+    }
+
+    &::after {
+      content: ">";
+      margin-left: 5px;
+    }
+  }
+
+  &__chats {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 310px);
+  }
+}
