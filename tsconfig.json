@@ -1,16 +1,23 @@
 {
-  "compilerOptions":{
-  "outDir": "dist",
-  "target": "es2016",
-  "declaration": false,
-  "module": "commonjs",
-  "strictNullChecks": true,
-  "noImplicitAny": true,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true,
-  "moduleResolution": "node",
-  "sourceMap": true,
- },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "es2016",
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "types": ["handlebars"],
+    "lib": ["ES2017", "dom"]
+  },
+  "exclude": ["node_modules", "dist", ".parcel-cache"]
 }
