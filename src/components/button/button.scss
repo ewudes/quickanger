@@ -6,7 +6,7 @@
   cursor: pointer;
   text-align: left;
   font-size: 13px;
-  margin: 10px 0;
+  // margin: 10px 0;
 
   &:hover {
     opacity: .8;
@@ -19,4 +19,12 @@
 
 .primary {
   color: #3369f3
+}
+
+.submit {
+  width: 28px;
+  height: 28px;
+  font-size: 0;
+  background-color: #3369f3;
+  border-radius: 50%;
 }
