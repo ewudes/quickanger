@@ -1,4 +1,122 @@
 .dialog {
-  margin: 0 auto;
-  color: #999999;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  &__header {
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    margin: 0 20px;
+  }
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    margin-left: 0;
+    background-image: url('../../../static/img/default-pic.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__name {
+    font-weight: 600;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 50%;
+    margin-left: auto;
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
+
+  &__menu-control {
+    position: relative;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    background-color: #000000;
+
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background-color: #000000;
+    }
+
+    &::before {
+      top: 6px;
+      right: 0;
+    }
+
+    &::after {
+      bottom: 5px;
+    }
+  }
+
+  &__messages {
+    flex: 3;
+    overflow-y: scroll;
+  }
+
+  &__control {
+    display: flex;
+    border-top: 1px solid #eaeaea;
+    margin: 0 20px;
+  }
+
+  &__clip {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../../static/img/clip.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 15px 0;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &__label {
+    flex: 2;
+    margin: 10px 0;
+  }
+
+  &__field {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border: none;
+    background-color: #efefef;
+    border-radius: 30px;
+    outline-color: #d1d0d0;
+  }
+
+  &__submit {
+    margin: 12px;
+    margin-right: 0;
+    background-image: url('../../../static/img/arrow-right.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
