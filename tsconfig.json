@@ -1,0 +1,16 @@
+{
+  "compilerOptions":{
+  "outDir": "dist",
+  "target": "es2016",
+  "declaration": false,
+  "module": "commonjs",
+  "strictNullChecks": false,
+  "noImplicitAny": false,
+  "noUnusedLocals": true,
+  "noUnusedParameters": true,
+  "moduleResolution": "node",
+  "sourceMap": true,
+ },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
