@@ -37,11 +37,16 @@
   }
 
   &__label {
+    position: relative;
     display: flex;
     padding: 10px 0;
 
     &:not(:last-child) {
       border-bottom: 1px solid #eaeaea;
+    }
+
+    & > .input__error--label {
+      top: 27px;
     }
   }
 
@@ -49,6 +54,7 @@
     border: none;
     flex: 1;
     text-align: right;
+    margin-left: 10px;
     outline-color: #d1d0d0;
   }
 
@@ -72,6 +78,14 @@
     &::before {
       bottom: -10px;
     }
+  }
+
+  &__btnSubmit {
+    margin-bottom: 20px;
+  }
+
+  &__btnClose {
+    margin-top: 20px;
   }
 }
 

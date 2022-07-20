@@ -98,8 +98,14 @@
   }
 
   &__label {
+    position: relative;
     flex: 2;
     margin: 10px 0;
+
+    & > .input__error--label {
+      top: -8px;
+      left: 240px;
+    }
   }
 
   &__field {
@@ -109,7 +115,16 @@
     border: none;
     background-color: #efefef;
     border-radius: 30px;
+    border: 2px solid transparent;
     outline-color: #d1d0d0;
+
+    &.input--error {
+      border: 2px solid #ff5d5d;
+
+      &::placeholder {
+        color: #ff5d5d
+      }
+    }
   }
 
   &__submit {

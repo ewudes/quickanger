@@ -1,0 +1,15 @@
+.input {
+  &--error {
+    color: #ff5d5d;
+  }
+  &__error {
+    &--label {
+      color: #ff5d5d;
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 8px;
+      position: absolute;
+      top: 12px;
+    }
+  }
+}
