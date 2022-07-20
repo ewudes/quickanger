@@ -1,9 +1,35 @@
-import auth from './auth.hbs';
-import signUp from '../../components/authForm/signUp/signUp';
-import signIn from '../../components/authForm/signIn/signIn';
-import './auth.scss'
+import Block from "../../utils/block";
+import SignUp from "../../components/authForm/signUp/signUp";
+import SignIn from "../../components/authForm/signIn/signIn";
+import Error from "../error/error";
 
-const loginPath = window.location.pathname === '/auth/login';
-const registrationPath = window.location.pathname === '/auth/registration';
+import auth from "./auth.tml";
+import "./auth.scss";
 
-export default () => auth({signIn, signUp, loginPath, registrationPath});
+class Auth extends Block {
+  constructor(props: Record<string, any> = {}) {
+    const pathName = window.location.pathname;
+    const loginPath = '/auth/login';
+    const registrationPath = '/auth/registration';
+    let signPage;
+
+    switch(pathName) {
+      case loginPath:
+        signPage = new SignIn();
+        break;
+      case registrationPath:
+        signPage = new SignUp();
+        break;
+      default:
+        signPage = new Error();
+    }
+
+    super("div", { loginPath, registrationPath, signPage, ...props });
+  }
+
+  render() {
+    return this.setTemplate(auth, this.props);
+  }
+}
+
+export default Auth;

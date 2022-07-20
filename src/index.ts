@@ -1,23 +1,24 @@
-import home from './pages/home/home';
-import profile from './pages/profile/profile';
-import auth from './pages/auth/auth';
-import error from './pages/error/error';
+import render from "./utils/render";
+
+import Home from './pages/home/home';
+import Profile from './pages/profile/profile';
+import Auth from './pages/auth/auth';
+import Error from './pages/error/error';
 import './index.scss';
 
-const currentPath = window.location.pathname;
-const rootElement = document.getElementById('app');
+const currentPath: string = window.location.pathname;
 
 switch(currentPath) {
   case '/auth/login':
   case '/auth/registration':
-    rootElement.innerHTML = auth();
+    render("#app", new Auth());
     break;
   case '/profile':
-    rootElement.innerHTML = profile();
+    render("#app", new Profile());
     break;
   case '/':
-    rootElement.innerHTML = home();
+    render("#app", new Home());
     break;
   default:
-    rootElement.innerHTML = error();
+    render("#app", new Error());
 }

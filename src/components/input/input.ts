@@ -1,5 +1,16 @@
-import input from './input.hbs';
+import Block from "../../utils/block";
+import input from "./input.tml";
 
-export default(label: string, text: string, type: string, placeholder: string, required: string, classLabel: string, classField: string) => {
-  return input({label, text, type, placeholder, required, classLabel, classField})
+import "./input.scss";
+
+class Input extends Block {
+  constructor(props: Record<string, any> = {}) {
+    super("div", props);
+  }
+
+  render() {
+    return this.setTemplate(input, this.props);
+  }
 }
+
+export default Input;
