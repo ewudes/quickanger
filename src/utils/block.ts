@@ -34,7 +34,9 @@ abstract class Block {
   }
 
   public setProps(newProps: Record<string, any>): void {
-    if (!newProps) return;
+    if (!newProps) {
+      return
+    };
 
     Object.assign(this.props, newProps);
   }

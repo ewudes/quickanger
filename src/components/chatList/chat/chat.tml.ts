@@ -8,7 +8,7 @@ const chat = Handlebars.compile(
       <p class="chatList__lastMessage">{{lastMessage}}</p>
     </div>
     <div class="chatList__common">
-      <span class="chatList__date">{{date}}</span>
+      <time class="chatList__date">{{date}}</time>
       {{#if badge}}
       <span class="chatList__badge">{{badge}}</span>
       {{/if}}

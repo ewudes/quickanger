@@ -22,20 +22,15 @@ const submit = (event: Event): void => {
 
   fields.forEach((input: any) => {
     const { verify } = Validation.verification(input.name, input.value);
-    if (!verify) validationError++;
+    if (!verify) {
+      validationError++
+    };
+
     data[input.name] = input.value;
   });
 
   if (validationError === 0) {
-    if (document.querySelector('[name="repeat_password"]')) {
-      if (!(data.password === data.repeat_password)) {
-        console.log("Пароли не совпадают");
-      } else {
-        console.log("Данные формы", data);
-      }
-    } else {
-      console.log("Данные формы", data);
-    }
+    console.log("Данные формы", data);
   } else {
     console.log("Некорректные данные");
   }
