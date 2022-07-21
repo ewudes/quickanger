@@ -2,8 +2,11 @@ import Block from "../../utils/block";
 import search from "./search.tml";
 import './search.scss'
 
+interface ISearch {
+}
+
 class Search extends Block {
-  constructor(props: Record<string, any> = {}) {
+  constructor(props?: ISearch) {
     super("div", props);
   }
 

@@ -2,8 +2,15 @@ import Block from "../../utils/block";
 import button from "./button.tml";
 import "./button.scss";
 
+interface IButton {
+  className: string;
+  style: string;
+  text: string;
+  type: string;
+  events?: { click: (e: Event) => void };
+}
 class Button extends Block {
-  constructor(props: Record<string, any> = {}) {
+  constructor(props: IButton) {
     super("div", props);
   }
 

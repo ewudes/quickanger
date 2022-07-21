@@ -1,10 +1,10 @@
 import Block from "../../utils/block";
 import chatList from "./chatList.tml";
 import "./chatList.scss";
-import Chat from "./chat/chat";
+import Chat, { IChatList } from "./chat/chat";
 
 class ChatList extends Block {
-  constructor(props: Record<string, any> = {}) {
+  constructor(props?: IChatList) {
     const chats = [
         {
           chat: new Chat({

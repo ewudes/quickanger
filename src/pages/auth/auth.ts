@@ -8,9 +8,9 @@ import "./auth.scss";
 
 class Auth extends Block {
   constructor(props: Record<string, any> = {}) {
-    const pathName = window.location.pathname;
-    const loginPath = '/auth/login';
-    const registrationPath = '/auth/registration';
+    const pathName: string = window.location.pathname;
+    const loginPath: string = '/auth/login';
+    const registrationPath: string = '/auth/registration';
     let signPage;
 
     switch(pathName) {

@@ -2,14 +2,14 @@ import Block from "../../utils/block";
 import { focus, blur, submit } from "../../utils/events";
 import Input from "../input/input";
 import Button from "../button/button";
-import Message from "./message/message";
+import Message, { IMessage } from "./message/message";
 
 import dialog from "./dialog.tml";
 import "./dialog.scss";
 
 class Dialog extends Block {
-  constructor(props: Record<string, any> = {}) {
-    const messageInput = new Input({ label: "message", text: "", type: "text", placeholder: "Сообщение", required: "required", classLabel: "dialog__label", classField: "dialog__field", events: { focus: focus, blur: blur } });
+  constructor(props?: IMessage) {
+    const messageInput = new Input({ label: "message", type: "text", placeholder: "Сообщение", required: "required", classField: "dialog__field", events: { focus: focus, blur: blur } });
     const submitBtn = new Button({ text: "Отправить", style: "submit", type: "submit", className: "dialog__submit", events: { click: submit } });
     const msgs = [
       {
