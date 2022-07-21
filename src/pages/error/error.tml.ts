@@ -2,8 +2,8 @@ import Handlebars from "handlebars";
 
 const error = Handlebars.compile(
   `<main class="error">
-    <h3 class="error__title">{{this.textError.0.status}}</h3>
-    <span class="error__description">{{this.textError.0.description}}</span>
+    <h1 class="error__title">404</h1>
+    <span class="error__description">Не туда попали</span>
     {{{errorBtn}}}
   </main>`
 );

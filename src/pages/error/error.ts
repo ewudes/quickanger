@@ -6,7 +6,13 @@ import "./error.scss";
 
 class Error extends Block {
   constructor(props: Record<string, any> = {}) {
-    const errorBtn = new Button({ text: "Назад к чатам", style: "primary", type: "button", className: "error__btn" });
+    const errorBtn = new Button({
+      text: "Назад к чатам",
+      style: "primary",
+      type: "button",
+      className: "error__btn"
+    });
+
     super("div", { errorBtn, ...props });
   }
 
@@ -16,19 +22,3 @@ class Error extends Block {
 }
 
 export default Error;
-
-// const textError = [
-//   {
-//     "status": "404",
-//     "description": "Не туда попали"
-//   },
-//   {
-//     "status": "500",
-//     "description": "Мы уже фиксим"
-//   }
-// ]
-
-// export default () => error({
-//   textError,
-//   errorBtn: button('Назад к чатам', 'primary', 'button', 'error__btn'),
-// });
