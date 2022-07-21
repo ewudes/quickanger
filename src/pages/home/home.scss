@@ -1,10 +1,12 @@
+@import "../../variables.scss";
+
 .home {
   display: flex;
-  background-color: #ffffff;
+  background-color: $main-bg-color;
 
   &__sidebar {
     width: 310px;
-    border-right: 1px solid #eaeaea;
+    border-right: 1px solid $border-color;
     box-sizing: border-box;
   }
 
@@ -14,13 +16,13 @@
     margin-top: 19px;
     margin-left: auto;
     text-align: right;
-    color: #999999;
+    color: $extra-font-color;
     margin-bottom: 9px;
     margin-right: 10px;
     cursor: pointer;
 
     &:hover {
-      color: #3d3d3d;
+      color: $main-font-color;
     }
 
     &::after {

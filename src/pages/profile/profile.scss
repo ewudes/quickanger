@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .profile {
   position: relative;
   display: flex;
@@ -42,7 +44,7 @@
     padding: 10px 0;
 
     &:not(:last-child) {
-      border-bottom: 1px solid #eaeaea;
+      border-bottom: 1px solid $border-color;
     }
 
     & > .input__error--label {
@@ -55,7 +57,7 @@
     flex: 1;
     text-align: right;
     margin-left: 10px;
-    outline-color: #d1d0d0;
+    outline-color: $primary-outline-color;
   }
 
   &__btnChangePass {
@@ -68,7 +70,7 @@
       content: "";
       width: 510px;
       height: 1px;
-      background-color: #eaeaea;
+      background-color: $border-color;
     }
 
     &::after {
@@ -94,7 +96,7 @@
   display: flex;
   left: 0;
   top: 0;
-  border: 1px solid #eaeaea;
+  border: 1px solid $border-color;
   width: 64px;
   box-sizing: border-box;
   height: 100%;
@@ -108,7 +110,7 @@
     font-size: 0;
     border-radius: 50%;
     margin: auto;
-    background-color: #3369f3;
+    background-color: $accent-color;
     background-image: url("../../../static/img/backTo.png");
     background-size: contain;
     background-position: center;

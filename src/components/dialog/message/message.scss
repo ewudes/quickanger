@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .message {
   max-width: 400px;
   margin: 20px;
@@ -6,12 +8,12 @@
 }
 
 .mine {
-  background-color: #e4edfd;
+  background-color: $mine-message-color;
   border-end-end-radius: 0;
   margin-left: auto;
 }
 
 .companion {
-  background-color: #f8f8f8;
+  background-color: $companion-message-color;
   border-start-start-radius: 0;
 }

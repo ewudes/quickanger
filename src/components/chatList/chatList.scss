@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .chatList {
   overflow-y: scroll;
   height: calc(100vh - 105px);
@@ -13,11 +15,11 @@
     position: relative;
     display: flex;
     padding: 12px 10px;
-    border-top: 1px solid #eaeaea;
-    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
 
     &:hover {
-      background-color: #e4edfd;
+      background-color: $hover-color;
     }
   }
 
@@ -53,7 +55,7 @@
     font-size: 12px;
     margin: 0;
     margin-top: 4px;
-    color: #999999;
+    color: $extra-font-color;
     max-width: 180px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -68,7 +70,7 @@
   }
 
   &__date {
-    color: #999999;
+    color: $extra-font-color;
     font-size: 9px;
     padding-top: 3px;
   }
@@ -80,8 +82,8 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #3369f3;
-    color: #ffffff;
+    background-color: $accent-color;
+    color: $btn-font-color;
     padding-top: 4px;
     text-align: center;
     font-size: 11px;
