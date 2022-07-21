@@ -1,4 +1,5 @@
 import Block from "../../../utils/block";
+
 import message from "./message.tml";
 import "./message.scss";
 

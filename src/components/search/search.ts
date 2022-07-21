@@ -1,4 +1,5 @@
 import Block from "../../utils/block";
+
 import search from "./search.tml";
 import './search.scss'
 

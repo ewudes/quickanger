@@ -9,8 +9,28 @@ import "./dialog.scss";
 
 class Dialog extends Block {
   constructor(props?: IMessage) {
-    const messageInput = new Input({ label: "message", type: "text", placeholder: "Сообщение", required: "required", classField: "dialog__field", events: { focus: focus, blur: blur } });
-    const submitBtn = new Button({ text: "Отправить", style: "submit", type: "submit", className: "dialog__submit", events: { click: submit } });
+    const messageInput = new Input({
+      label: "message",
+      type: "text",
+      placeholder: "Сообщение",
+      required: "required",
+      classField: "dialog__field",
+      events: {
+        focus: focus,
+        blur: blur,
+      }
+    });
+
+    const submitBtn = new Button({
+      text: "Отправить",
+      style: "submit",
+      type: "submit",
+      className: "dialog__submit",
+      events: {
+        click: submit
+      }
+    });
+
     const msgs = [
       {
         msg: new Message({
@@ -108,7 +128,7 @@ class Dialog extends Block {
           text: 'Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).',
         })
       }
-    ]
+    ];
 
     super("div", { msgs, messageInput, submitBtn, ...props});
   }

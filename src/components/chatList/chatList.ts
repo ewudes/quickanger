@@ -1,7 +1,9 @@
 import Block from "../../utils/block";
+import Chat, { IChatList } from "./chat/chat";
+
 import chatList from "./chatList.tml";
 import "./chatList.scss";
-import Chat, { IChatList } from "./chat/chat";
+
 
 class ChatList extends Block {
   constructor(props?: IChatList) {
