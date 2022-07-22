@@ -1,3 +1,6 @@
+
+@import "../../variables.scss";
+
 .btn {
   width: 116px;
   border: 0;
@@ -6,7 +9,6 @@
   cursor: pointer;
   text-align: left;
   font-size: 13px;
-  margin: 10px 0;
 
   &:hover {
     opacity: .8;
@@ -14,9 +16,17 @@
 }
 
 .danger {
-  color: #ff0000;
+  color: $danger-color;
 }
 
 .primary {
-  color: #3369f3
+  color: $accent-color;
+}
+
+.submit {
+  width: 28px;
+  height: 28px;
+  font-size: 0;
+  background-color: $accent-color;
+  border-radius: 50%;
 }

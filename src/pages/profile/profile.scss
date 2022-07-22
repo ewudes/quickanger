@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .profile {
   position: relative;
   display: flex;
@@ -37,11 +39,16 @@
   }
 
   &__label {
+    position: relative;
     display: flex;
     padding: 10px 0;
 
     &:not(:last-child) {
-      border-bottom: 1px solid #eaeaea;
+      border-bottom: 1px solid $border-color;
+    }
+
+    & > .input__error--label {
+      top: 27px;
     }
   }
 
@@ -49,7 +56,8 @@
     border: none;
     flex: 1;
     text-align: right;
-    outline: none;
+    margin-left: 10px;
+    outline-color: $primary-outline-color;
   }
 
   &__btnChangePass {
@@ -62,7 +70,7 @@
       content: "";
       width: 510px;
       height: 1px;
-      background-color: #eaeaea;
+      background-color: $border-color;
     }
 
     &::after {
@@ -73,6 +81,14 @@
       bottom: -10px;
     }
   }
+
+  &__btnSubmit {
+    margin-bottom: 20px;
+  }
+
+  &__btnClose {
+    margin-top: 20px;
+  }
 }
 
 .backTo {
@@ -80,7 +96,7 @@
   display: flex;
   left: 0;
   top: 0;
-  border: 1px solid #eaeaea;
+  border: 1px solid $border-color;
   width: 64px;
   box-sizing: border-box;
   height: 100%;
@@ -94,7 +110,7 @@
     font-size: 0;
     border-radius: 50%;
     margin: auto;
-    background-color: #3369f3;
+    background-color: $accent-color;
     background-image: url("../../../static/img/backTo.png");
     background-size: contain;
     background-position: center;
