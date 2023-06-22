@@ -1,65 +1,114 @@
 import Validation from "./validation";
+import router from "./router";
+import auth from "../controllers/auth";
+
+const goToRegister = (event: Event): void => {
+  if ((event.target as HTMLElement).className === "auth-form__link ") {
+    router.go("/sign-up");
+  }
+};
+
+const goToLogin = (event: Event): void => {
+  if ((event.target as HTMLElement).className === "auth-form__link ") {
+    router.go("/");
+  }
+};
+
+const settingClick = (event: Event): void => {
+  if (
+    (event.target as HTMLElement).className === "auth-form__link account__back"
+  ) {
+    auth.logout();
+  }
+};
 
 const focus = (event: Event): void => {
   const input = event.target as HTMLInputElement;
-  input.classList.remove("input--error");
-
+  input.classList.remove("input_error");
 };
 
 const blur = (event: Event): void => {
   const input = event.target as HTMLInputElement;
-  const result = Validation.verification(input.name, input.value);
+  const verifyResult = Validation.verification(input.name, input.value);
 
-  toggleError(input, result);
+  toggleErrorElement(input, verifyResult);
 };
 
-const submit = (event: Event): void => {
+const signInBt = (event: Event) => {
   event.preventDefault();
 
+  const data = validationForm();
+
+  if (data) {
+    auth.signIn(data);
+  }
+};
+
+const signUpBt = (event: Event) => {
+  event.preventDefault();
+
+  const data = validationForm();
+
+  if (data) {
+    auth.signUp(data);
+  }
+};
+
+const validationForm = (): Record<string, string> | void => {
   const data: Record<string, string> = {};
-  const fields = document.querySelectorAll(".input");
+  const inputFields = document.querySelectorAll(".authForm__field");
   let validationError: number = 0;
 
-  fields.forEach((input: any) => {
+  inputFields.forEach((input: any) => {
     const { verify } = Validation.verification(input.name, input.value);
-    if (!verify) {
-      validationError++
-    };
+    if (!verify) validationError++;
 
     data[input.name] = input.value;
   });
 
   if (validationError === 0) {
-    console.log("Данные формы", data);
+    if (document.querySelector('[name="repeat_password"]')) {
+      if (!(data.password === data.repeat_password)) {
+        const inputWrapper: any = document.querySelector(".input-wrapper");
+        const div = document.createElement("div");
+        div.setAttribute("class", "input__error_label");
+        div.textContent = "Пароли не совпадают";
+        inputWrapper.appendChild(div);
+      } else {
+        return data;
+      }
+    } else {
+      return data;
+    }
   } else {
-    console.log("Некорректные данные");
+    return undefined;
   }
 };
 
-const createError = (message: string): HTMLElement => {
+const createErrorElement = (message: string): HTMLElement => {
   const div = document.createElement("div");
-  div.setAttribute("class", "input__error--label");
+  div.setAttribute("class", "input__error_label");
   div.textContent = message;
 
   return div;
 };
 
-const toggleError = (
+const toggleErrorElement = (
   target: HTMLInputElement,
-  result: {
+  verifyResult: {
     verify: boolean;
     message: string;
   }
 ): void => {
-  if (!result.verify) {
-    target.classList.add("input--error");
+  if (!verifyResult.verify) {
+    target.classList.add("input_error");
 
     if (
       target.nextElementSibling === null ||
       (target.nextElementSibling !== null &&
         target.nextElementSibling.tagName !== "DIV")
     ) {
-      const element = createError(result.message);
+      const element = createErrorElement(verifyResult.message);
       target.after(element);
     }
   }
@@ -67,10 +116,19 @@ const toggleError = (
   if (
     target.nextElementSibling !== null &&
     target.nextElementSibling.tagName === "DIV" &&
-    result.verify
+    verifyResult.verify
   ) {
     target.nextElementSibling.remove();
   }
 };
 
-export { focus, blur, submit };
+export {
+  goToRegister,
+  goToLogin,
+  settingClick,
+  focus,
+  blur,
+  signUpBt,
+  signInBt,
+  validationForm,
+};

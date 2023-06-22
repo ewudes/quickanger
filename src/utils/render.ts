@@ -7,5 +7,4 @@ function render(query: string, block: Block) {
     block.dispatchMountComponent();
 }
 
-
 export default render;

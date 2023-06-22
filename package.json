@@ -1,7 +1,6 @@
 {
-  "name": "middle.messenger.praktikum.yandex",
+  "name": "quickanger",
   "version": "1.0.0",
-  "description": "### Откройте pull request в ветку main из ветки, где вы разрабатывали проект, и добавьте ссылку на этот pr в README.md в ветке main.  ### ВАЖНО: pull request должен называться “Sprint i” (i — номер спринта).",
   "source": "src/index.html",
   "scripts": {
     "start": "npm run build && node ./app.js",
@@ -11,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ewudes/middle.messenger.praktikum.yandex.git"
+    "url": "git+https://github.com/ewudes/quickanger.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ewudes/middle.messenger.praktikum.yandex/issues"
+    "url": "https://github.com/ewudes/quickanger/issues"
   },
-  "homepage": "https://github.com/ewudes/middle.messenger.praktikum.yandex#readme",
+  "homepage": "https://github.com/ewudes/quickanger#readme",
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "^1.0.9",
     "@parcel/transformer-sass": "^2.6.2",
