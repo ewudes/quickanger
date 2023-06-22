@@ -1,5 +1,7 @@
 import Block from "../../../utils/block";
-import { focus, blur, submit } from "../../../utils/events";
+import { focus, blur, signInBt } from "../../../utils/events";
+import router from "../../../utils/router";
+
 import Input from "../../input/input";
 import Button from "../../button/button";
 
@@ -38,7 +40,7 @@ class SignIn extends Block {
       type: "submit",
       className: "authForm__submit",
       events: {
-        click: submit
+        click: signInBt
       }
     });
 
@@ -46,7 +48,10 @@ class SignIn extends Block {
       text: "Нет аккаунта?",
       style: "primary",
       type: "button",
-      className: "authForm__signIn"
+      className: "authForm__signIn",
+      events: {
+        click: () => router.go("/registration"),
+      }
     });
 
     super("div", { login, password, submitBtn, signInBtn, ...props });

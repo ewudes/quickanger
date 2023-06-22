@@ -1,5 +1,5 @@
 import Block from "../../../utils/block";
-import { focus, blur, submit } from "../../../utils/events";
+import { focus, blur, signUpBt } from "../../../utils/events";
 import Input from "../../input/input";
 import Button from "../../button/button";
 
@@ -98,7 +98,7 @@ class SignUp extends Block {
       type: "submit",
       className: "authForm__submit",
       events: {
-        click: submit
+        click: signUpBt
       }
     });
 
