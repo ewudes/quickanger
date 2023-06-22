@@ -3,7 +3,7 @@ import Handlebars from "handlebars";
 const home = Handlebars.compile(
   `<main class="home">
     <aside class="home__sidebar">
-      <a class="home__toProfile">Профиль</a>
+      {{{linkToProfile}}}
       {{{search}}}
       {{{chatList}}}
     </aside>
