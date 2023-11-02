@@ -21,7 +21,7 @@
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "^1.0.9",
     "@parcel/transformer-sass": "^2.6.2",
-    "@trivago/prettier-plugin-sort-imports": "3.2.0",
+    "@trivago/prettier-plugin-sort-imports": "4.2.1",
     "@tsconfig/recommended": "1.0.1",
     "@typescript-eslint/eslint-plugin": "5.30.6",
     "@typescript-eslint/parser": "5.30.6",
